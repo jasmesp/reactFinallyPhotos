@@ -18,9 +18,9 @@ function App() {
         <button onClick={() => setCount(count + 1)}>{count}</button>
 
       </div>
-    <div id="dragdrop">
-      <DragDrop />
-    </div>
+    {/*<div id="dragdrop">*/}
+    {/*  <DragDrop />*/}
+    {/*</div>*/}
     <hr />
     <div id="preview">
         <Previews />

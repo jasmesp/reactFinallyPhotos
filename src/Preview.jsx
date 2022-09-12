@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {useDropzone} from 'react-dropzone';
 
+
 const thumbsContainer = {
     display: 'flex',
     flexDirection: 'row',
@@ -31,7 +32,16 @@ const img = {
     width: 'auto',
     height: '100%'
 };
-
+const clickStyle = {
+    color: 'blue',
+    textDecoration: 'underline',
+    cursor: 'pointer',
+    //font weight bold:
+    fontWeight: 'bold',
+    fontSize: '1.5em',
+    //css text italic:
+    fontStyle: 'italic'
+}
 
 function Previews(props) {
     const [files, setFiles] = useState([]);
@@ -68,7 +78,7 @@ function Previews(props) {
         <section className="container">
             <div {...getRootProps({className: 'dropzone'})}>
                 <input {...getInputProps()} />
-                <p>Drag 'n' drop some files here, or click to select files</p>
+                <p>Drag 'n' drop some files here, or <span style={clickStyle}>click</span> to select files</p>
             </div>
             <aside style={thumbsContainer}>
                 {thumbs}
@@ -76,5 +86,9 @@ function Previews(props) {
         </section>
     );
 }
+
+
+
+
 
 export default Previews;
