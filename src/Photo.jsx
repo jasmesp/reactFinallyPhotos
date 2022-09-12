@@ -2,6 +2,11 @@
 import React from 'react';
 
 
+const thumbnailFolder = './assets/thumbnails/';
+const fullSizeFolder = './assets/fullSize/';
+
+
+
 
 
 function Photo(props) {

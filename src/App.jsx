@@ -3,8 +3,8 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 import Photo from './Photo'
 import thumbnail from './assets/dish.jpeg'
-
-
+import DragDrop from "./DragDrop.jsx";
+import Previews from "./Preview.jsx";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,6 +18,13 @@ function App() {
         <button onClick={() => setCount(count + 1)}>{count}</button>
 
       </div>
+    <div id="dragdrop">
+      <DragDrop />
+    </div>
+    <hr />
+    <div id="preview">
+        <Previews />
+    </div>
   </>)
 }
 
